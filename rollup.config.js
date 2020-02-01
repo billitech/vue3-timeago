@@ -9,7 +9,7 @@ export default [
     input: 'src/TimeAgo.vue',
     output: {
       format: 'esm',
-      file: 'dist/vue2-timeago.esm.js'
+      file: 'dist/vue3-timeago.esm.js'
     },
     plugins: [
       terser(),
@@ -24,10 +24,10 @@ export default [
     ]
   },
   {
-    input: 'src/vue2-timeago.js',
+    input: 'src/vue3-timeago.js',
     output: {
       format: 'iife',
-      file: 'dist/vue2-timeago.js'
+      file: 'dist/vue3-timeago.js'
     },
     plugins: [
       terser(),

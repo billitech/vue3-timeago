@@ -1,19 +1,21 @@
 {
-  "name": "vue2-timeago",
-  "version": "1.2.3",
+  "name": "vue3-timeago",
+  "version": "1.0.0",
   "description": "A vue component used to format date with time ago statement.",
-  "main": "dist/vue2-timeago.esm.js",
+  "main": "dist/vue3-timeago.esm.js",
   "keywords": [
     "vue",
+    "vue3",
+    "v-slot",
     "time",
     "ago",
     "timeago"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/runkids/vue2-timeago.git"
+    "url": "git+https://github.com/RealRobin-com/vue3-timeago.git"
   },
-  "author": "runkids <egg358358@gmail.com>",
+  "author": "Justin Robinson <justin@realrobin.com>",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c --environment BUILD:production",
@@ -31,7 +33,6 @@
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "7.7.1",
-    "babel-preset-env": "^1.7.0",
-    "v-tooltip": "^2.0.2"
+    "babel-preset-env": "^1.7.0"
   }
 }
