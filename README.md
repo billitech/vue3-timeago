@@ -4,7 +4,7 @@ Forked from https://github.com/runkids/vue2-timeago
 
 - Added v-slot scope
 - removed css
-- Reduce unpacked size by 88% from 151 kB to 18.3 kB (as of vue3-timeago v1.0.3 and vue2-timeago v1.2.3)
+- Reduce unpacked size by 88% from 151 kB to 18.4 kB (as of vue3-timeago v1.0.3 and vue2-timeago v1.2.3)
 
 [![vue3](https://img.shields.io/badge/vue-3.x-brightgreen.svg)](https://vuejs.org/) [![npm](https://img.shields.io/npm/v/vue3-timeago.svg)](https://www.npmjs.com/package/vue3-timeago) [![npm](https://img.shields.io/npm/dt/vue3-timeago.svg)](https://www.npmjs.com/package/vue3-timeago) [![npm](https://img.shields.io/npm/l/vue3-timeago.svg)](https://github.com/runkids/vue3-timeago/blob/master/LICENSE)
 
