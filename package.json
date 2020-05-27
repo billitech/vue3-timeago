@@ -1,6 +1,6 @@
 {
   "name": "vue3-timeago",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A vue component used to format date with time ago statement.",
   "main": "dist/vue3-timeago.esm.js",
   "keywords": [
@@ -33,6 +33,7 @@
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "7.7.1",
+    "babel-loader": "^8.1.0",
     "babel-preset-env": "^1.7.0"
   }
 }
