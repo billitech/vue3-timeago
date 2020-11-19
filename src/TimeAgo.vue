@@ -3,9 +3,9 @@
     <slot :timeago="timeago"></slot>
   </span>
 </template>
-
 <script>
 import timer from "../src/lib/index";
+import {ref, computed, nextTick, onMounted, onUnmounted} from 'vue'
 
 export default {
   name: "TimeAgo",
@@ -36,50 +36,46 @@ export default {
     }
   },
 
-  data() {
-    return {
-      timeago: "",
+  setup(props) {
+    const timeago = ref('')
+    const nowString = ref('')
+    const intervalId = ref(null)
 
-      nowString: "",
-
-      intervalId: null
-    };
-  },
-
-  computed: {
-    options() {
+    const options = computed(() => {
       return {
-        placement: typeof this.tooltip === "string" ? this.tooltip : "top",
-        content: this.nowString
-      };
-    }
-  },
-
-  methods: {
-    reloadTime() {
-      let { timeago, nowString } = timer(
-        this.datetime,
-        this.locale,
-        this.long ? "long" : "short"
-      );
-      this.timeago = timeago;
-      this.nowString = nowString;
-      if (this.intervalId) this.todo();
-    }
-  },
-
-  mounted() {
-    this.$nextTick(() => {
-      this.reloadTime();
-      if (this.refresh) {
-        const refreshTime = this.refresh === true ? 60 : this.refresh;
-        this.intervalId = setInterval(this.reloadTime, this.refresh * 1000);
+        placement: typeof props.tooltip === "string" ? props.tooltip : "top",
+        content: nowString.value
       }
-    });
-  },
+    })
 
-  destroyed() {
-    if (this.intervalId) clearInterval(this.intervalId);
+    const reloadTime = () => {
+      const timer = timer(
+          props.datetime,
+          props.locale,
+          props.long ? "long" : "short"
+      );
+      timeago.value = timer.timeago;
+      nowString.value = timer.nowString;
+      if (intervalId.value) props.todo();
+    }
+
+    onMounted(() => {
+      nextTick(() => {
+        reloadTime();
+        if (props.refresh) {
+          const refreshTime = props.refresh === true ? 60 : props.refresh;
+          intervalId.value = setInterval(reloadTime, refreshTime * 1000);
+        }
+      })
+    })
+
+    onUnmounted(() => {
+      if (intervalId.value) clearInterval(intervalId.value);
+    })
+
+    return {
+      timeago
+    }
   }
-};
+}
 </script>
