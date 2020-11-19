@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8908674-4091-4ae7-88fb-dc47832eb656" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/vue3-timeago.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vue3-timeago.esm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TimeAgo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimeAgo.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +39,9 @@
       <updated>1605818180515</updated>
       <workItem from="1605818181967" duration="943000" />
       <workItem from="1605819197701" duration="1793000" />
-      <workItem from="1605821011481" duration="201000" />
+      <workItem from="1605821011481" duration="976000" />
+      <workItem from="1605822326349" duration="187000" />
+      <workItem from="1605822590608" duration="108000" />
     </task>
     <servers />
   </component>
